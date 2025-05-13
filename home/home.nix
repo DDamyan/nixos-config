@@ -23,8 +23,8 @@
 
     programs.git = {
         enable = true;
-        userEmail = "";
-        userName = "";
+        userEmail = "ddminedd@gmail.com";
+        userName = "DDamyan";
     };
 
 
