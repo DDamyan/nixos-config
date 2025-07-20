@@ -1,4 +1,11 @@
-{config, pkgs, pkgs-unstable, inputs,  ... }: {
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  inputs,
+  ...
+}:
+{
 
     home.packages = with pkgs; [ 
       firefox
@@ -13,7 +20,6 @@
         nrt = "sudo nixos-rebuild test --flake /home/damyan/nixos-config#";
     };
 
-
     home.username = "damyan";
     home.homeDirectory = "/home/damyan";
 
@@ -26,6 +32,4 @@
         userEmail = "ddminedd@gmail.com";
         userName = "DDamyan";
     };
-
-
 }
