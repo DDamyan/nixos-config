@@ -7,8 +7,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -46,13 +46,13 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
-    layout = "de";
-    xkbVariant = "";
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
   };
 
   # Configure console keymap
@@ -92,7 +92,7 @@
     packages = with pkgs; [
       #vim
       #element-web
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -106,10 +106,10 @@
   #  wget
   ];
 
-   nix.settings = {
+  nix.settings = {
         experimental-features = [ "nix-command" "flakes" ];
-        # warn-dirty = false;
-    };
+    # warn-dirty = false;
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
