@@ -14,6 +14,8 @@
     kate
     vscode
     neovim
+    discord
+    docker
   ];
 
 
