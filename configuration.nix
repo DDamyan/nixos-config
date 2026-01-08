@@ -88,7 +88,7 @@
   users.users.damyan = {
     isNormalUser = true;
     description = "Damyan";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       #vim
       #element-web
