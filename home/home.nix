@@ -6,17 +6,22 @@
   ...
 }:
 {
-
   home.packages = with pkgs; [
     nixfmt-rfc-style # formater for nix
     nil # language server for nix
     firefox
-    kate
+    #kdePackages.kate
+    #flutter
     vscode
     neovim
     discord
-  ];
 
+    #androidenv.androidPkgs.androidsdk
+    # curl
+    # unzip
+    # xz
+    # zip
+  ];
 
   home.shellAliases = {
     nrs = "sudo nixos-rebuild switch --flake /home/damyan/nixos-config#";
@@ -34,7 +39,11 @@
 
   programs.git = {
     enable = true;
-    userEmail = "ddminedd@gmail.com";
-    userName = "DDamyan";
+    settings = {
+      user = {
+        email = "ddminedd@gmail.com";
+        name = "DDamyan";
+      };
+    };
   };
 }
