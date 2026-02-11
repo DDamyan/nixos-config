@@ -51,8 +51,8 @@
     variant = "";
   };
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.ly.enable = true;
+  # Desktop Environment
+  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # Configure console keymap
